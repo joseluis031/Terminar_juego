@@ -88,4 +88,4 @@ while True:
         break
 
 if intentos == intentos_maximos:
-    print("No te quedan mas oportunidades, has perdido :(") 
+    print("No te quedan mas oportunidades, has perdido :(") ´´
