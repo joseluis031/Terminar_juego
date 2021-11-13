@@ -1,5 +1,5 @@
 # Terminar_juego
-Dirección de GitHub para este repositorio: [GitHub] (https://github.com/joseluis031/Terminar_juego.git)
+Dirección de GitHub para este repositorio: [GitHub](https://github.com/joseluis031/Terminar_juego.git)
 
 Hemos terminado el juego de adivinar un numero aleatorio entre un valor minimo y maximo. Además, hemos introducido varios niveles de dificultad, y hemos establecido un numero de intentos máximos para cada nivel
 
@@ -14,7 +14,7 @@ El diagrama de flujo es el siguiente:
 
 El código del juego es el siguiente:
 
-´´´import random
+´´import random
 MIN = 0  #Defino los parametros entre los que quiero que trabaje la funcion 
 MAX = 0
 minimo = MIN
