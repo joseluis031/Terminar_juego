@@ -53,7 +53,7 @@ def ayudas(): #Defino una funcion por si el usuario quiere una ayuda
     return ayuda
 
 help = ayudas()
-intentos = 1
+intentos = 0
 #Parte 2 (Comienzo del juego)
 print("Que comienze el juego, intenta adivinar el numero aleatorio")
 while True:
