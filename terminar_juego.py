@@ -5,7 +5,7 @@ minimo = MIN
 maximo = MAX
 intentos_maximos = 0
 
-while True:
+while True: #Defino las "caracteristicas" del juego dependiendo de la dificultad que elija el usuario
     nivel = input ("Seleccione un nivel: facil, medio, avanzado, o maestro:")
     if nivel == "facil":
             maximo = 100
@@ -25,7 +25,7 @@ while True:
 numero_elegido = random.randint(minimo,maximo)
 
 def pedir_numero(invitacion):
-    invitacion += " entre " + str(minimo) + " y " + str(maximo) + " :"  #no entiendo muy bien el uso de invitacion
+    invitacion += " entre " + str(minimo) + " y " + str(maximo) + " :"
     while True:
         entrada = input(invitacion)  #Aquí tenemos una función que pide al usuario que introduzca un número cualquiera
         try:
@@ -40,25 +40,28 @@ def pedir_numero(invitacion):
 
     return entrada
 
-def ayudas():
-    ayuda = input (print("¿Quiere algo de ayuda? si o no????"))
+def ayudas(): #Defino una funcion por si el usuario quiere una ayuda
+    ayuda = input ("¿Quiere algo de ayuda? si o no????")
+    ayuda = ayuda.lower()
     try:
         if ayuda == "si":
             print("El numero esta entre " + str(minimo) + " y " + str(maximo))
-        else:
+        if ayuda == "no": #Para cualquier respuesta que no sea "si"
             print("Tu te lo pierdes...")
     except:
         pass
     return ayuda
+
+help = ayudas()
 intentos = 1
-#Parte 2
+#Parte 2 (Comienzo del juego)
 print("Que comienze el juego, intenta adivinar el numero aleatorio")
 while True:
     intento = pedir_numero("Intente adivinar el numero") #Aqui tambien se hace referencia a la funcion anterior
     if intento < numero_elegido:
         print("Te has quedado corto")
         minimo = intento + 1 #Esto sirve para ayudar a acertar el numero, reduce posibilidades
-        intentos += 1
+        intentos += 1 #Esto suma 1 a los intentos que llevas hasta alcanzar el numero maximo de intentos que tienes
     elif intento > numero_elegido:
         print("Te has pasado crack")
         maximo = intento - 1
@@ -69,4 +72,4 @@ while True:
         break
 
 if intentos == intentos_maximos:
-    print("No te quedan mas oportunidades, has perdido :(")
+    print("No te quedan mas oportunidades, has perdido :(") 
