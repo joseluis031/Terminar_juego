@@ -1,9 +1,24 @@
 
 MIN = 0  #Defino los parametros entre los que quiero que trabaje la funcion 
-MAX = 99
+MAX = 0
 minimo = MIN
 maximo = MAX
-def pedir_numero(invitacion, minimo, maximo):
+
+while True:
+    nivel = input ("Seleccione un nivel: facil, medio, avanzado, o maestro:")
+    if nivel == "facil":
+            maximo = 100
+            break
+    elif nivel == "medio":
+            maximo = 1000
+            break
+    elif nivel == "avanzado":
+            maximo = 1000000
+    elif nivel == "maestro":
+            maximo = 1000000000000
+            break
+    
+def pedir_numero(invitacion):
     invitacion += " entre " + str(minimo) + " y " + str(maximo) + " :"  #no entiendo muy bien el uso de invitacion
     while True:
         entrada = input(invitacion)  #Aquí tenemos una función que pide al usuario que introduzca un número cualquiera
@@ -11,9 +26,12 @@ def pedir_numero(invitacion, minimo, maximo):
             entrada = int(entrada)
         except:
             pass
+        if entrada > maximo or entrada < minimo:
+            print ("El numero introducido no esta dentro del rango, repita con otro numero")
         else:
             if minimo <= entrada <= maximo:
                 break
+
     return entrada
 
 # Parte 1
