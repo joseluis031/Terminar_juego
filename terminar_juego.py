@@ -1,8 +1,9 @@
-
+import random
 MIN = 0  #Defino los parametros entre los que quiero que trabaje la funcion 
 MAX = 0
 minimo = MIN
 maximo = MAX
+numero_elegido = random.randint(minimo,maximo)
 
 while True:
     nivel = input ("Seleccione un nivel: facil, medio, avanzado, o maestro:")
@@ -34,6 +35,17 @@ def pedir_numero(invitacion):
 
     return entrada
 
+def ayudas():
+    ayuda = input (print("¿Quiere algo de ayuda? si o no????"))
+    try:
+        if ayuda == "si" or ayuda == "no":
+            print("El numero esta entre " + str(minimo) + " y " + str(maximo))
+        else:
+            print("Tu te lo pierdes...")
+    except:
+        pass
+    return ayuda
+
 # Parte 1
 print("Introduce el numero a adivinar")
 numero = pedir_numero("Introduzca el numero a adivinar",)  #Hace referencia a la funcion definida anteriormente bajo el nombre de pedir_numero()
@@ -41,7 +53,7 @@ numero = pedir_numero("Introduzca el numero a adivinar",)  #Hace referencia a la
 #Parte 2
 print("Intente adivinar el numero")
 while True:
-    intento = pedir_numero("Intente adivinar el numero", minimo, maximo) #Aqui tambien se hace referencia a la funcion anterior
+    intento = pedir_numero("Intente adivinar el numero") #Aqui tambien se hace referencia a la funcion anterior
     if intento < numero:
         print("Te has quedado corto")
         minimo = intento + 1 #Esto sirve para ayudar a acertar el numero, reduce posibilidades
