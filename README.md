@@ -14,7 +14,7 @@ El diagrama de flujo es el siguiente:
 
 El código del juego es el siguiente:
 
-´´import random
+´´´import random
 MIN = 0  #Defino los parametros entre los que quiero que trabaje la funcion 
 MAX = 0
 minimo = MIN
@@ -88,4 +88,4 @@ while True:
         break
 
 if intentos == intentos_maximos:
-    print("No te quedan mas oportunidades, has perdido :(") ´´
+    print("No te quedan mas oportunidades, has perdido :(") ´´´
