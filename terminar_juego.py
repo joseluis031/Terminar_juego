@@ -1,6 +1,11 @@
-def pedir_numero():
+
+MIN = 0  #Defino los parametros entre los que quiero que trabaje la funcion 
+MAX = 99
+
+def pedir_numero(invitacion):
+    invitacion += "entre" + str(MIN) + "y" + str(MAX) + ":"  #no entiendo muy bien el uso de invitacion
     while True:
-        entrada = input("Introduzca un numero entre 0 y 99")  #Aquí tenemos una función que pide al usuario que introduzca un número cualquiera
+        entrada = input("Introduzca un numero entre 0 y 99:")  #Aquí tenemos una función que pide al usuario que introduzca un número cualquiera
         try:
             entrada = int(entrada)
         except:
