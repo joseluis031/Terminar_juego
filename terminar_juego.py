@@ -18,7 +18,7 @@ def pedir_numero(invitacion, minimo, maximo):
 
 # Parte 1
 print("Introduce el numero a adivinar")
-numero = pedir_numero("Introduzca el numero a adivinar", MIN, MAX)  #Hace referencia a la funcion definida anteriormente bajo el nombre de pedir_numero()
+numero = pedir_numero("Introduzca el numero a adivinar",)  #Hace referencia a la funcion definida anteriormente bajo el nombre de pedir_numero()
 
 #Parte 2
 print("Intente adivinar el numero")
