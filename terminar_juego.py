@@ -42,11 +42,11 @@ def pedir_numero(invitacion):
 
 def ayudas(): #Defino una funcion por si el usuario quiere una ayuda
     ayuda = input ("¿Quiere algo de ayuda? si o no????")
-    ayuda = ayuda.lower()
+    ayuda = ayuda.lower() #Para quitar el none que me salia
     try:
         if ayuda == "si":
             print("El numero esta entre " + str(minimo) + " y " + str(maximo))
-        if ayuda == "no": #Para cualquier respuesta que no sea "si"
+        elif ayuda == "no":
             print("Tu te lo pierdes...")
     except:
         pass
