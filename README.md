@@ -1,6 +1,6 @@
 # Terminar_juego
 Dirección de GitHub para este repositorio: [GitHub](https://github.com/joseluis031/Terminar_juego.git)
-
+Estoy muy orgulloso de mi trabajo.
 Hemos terminado el juego de adivinar un numero aleatorio entre un valor minimo y maximo. Además, hemos introducido varios niveles de dificultad, y hemos establecido un numero de intentos máximos para cada nivel
 
 
